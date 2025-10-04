@@ -38,14 +38,23 @@ const useCartStore = create<CartStoreType & CartStoreActionsType>()(
               item.selectedColor === product.selectedColor &&
               item.selectedSize === product.selectedSize
           );
+          console.log("isProductExists", isProductExists);
           if (isProductExists && isProductExists.quantity === 1) {
+            console.log(
+              "isProductExists.quantity === 1",
+              isProductExists.quantity === 1
+            );
+            console.log("product.selectedColor", product.selectedColor);
+            console.log("product.selectedSize", product.selectedSize);
             return {
               ...state,
               cartItems: state.cartItems.filter(
                 (item) =>
-                  item.id !== product.id &&
-                  item.selectedColor !== product.selectedColor &&
-                  item.selectedSize !== product.selectedSize
+                  !(
+                    item.id == product.id &&
+                    item.selectedColor == product.selectedColor &&
+                    item.selectedSize == product.selectedSize
+                  )
               ),
             };
           }
