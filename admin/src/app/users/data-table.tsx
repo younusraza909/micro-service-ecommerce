@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/table";
 import { DataTablePagination } from "@/components/TablePagination";
 import { useState } from "react";
-import { Trash2Icon } from "lucide-react";
+import { Trash2 } from "lucide-react";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -51,10 +51,10 @@ export function DataTable<TData, TValue>({
   return (
     <div className="rounded-md border">
       {Object.keys(rowSelection).length > 0 && (
-        <div className="flex items-center justify-end space-x-2 py-4">
-          <button className="flex items-center gap-2 bg-red-500 text-white px-2 py-1 rounded-md m-4 cursor-pointer">
-            <Trash2Icon />
-            Delete Payment(s)
+        <div className="flex justify-end">
+          <button className="flex items-center gap-2 bg-red-500 text-white px-2 py-1 text-sm rounded-md m-4 cursor-pointer">
+            <Trash2 className="w-4 h-4" />
+            Delete User(s)
           </button>
         </div>
       )}
