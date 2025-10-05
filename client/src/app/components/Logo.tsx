@@ -13,7 +13,7 @@ const Logo = () => {
         className="w-6 h-6 md:w-9 md:h-9"
       />
       <p className="text-md font-medium tracking-wider hidden md:block">
-        TRENDLAMA
+        TRENDLY
       </p>
     </Link>
   );

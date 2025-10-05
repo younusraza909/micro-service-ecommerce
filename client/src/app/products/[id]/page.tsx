@@ -25,7 +25,7 @@ export const generateMetadata = ({ params }: { params: { id: string } }) => {
   //  TODO GET THE PRODUCT FROM DB
   // TEMPORARY METADATA
   return {
-    title: `${product.name} - Trendlama`,
+    title: `${product.name} - Trendly`,
     description: product.shortDescription,
   };
 };

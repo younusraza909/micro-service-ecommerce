@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Trendlama - Best Clothes",
-  description: "Trendlama is the best place to buy clothes",
+  title: "Trendly - Best Clothes",
+  description: "Trendly is the best place to buy clothes",
 };
 
 export default function RootLayout({

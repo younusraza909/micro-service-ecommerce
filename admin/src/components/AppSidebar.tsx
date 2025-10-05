@@ -29,6 +29,7 @@ import {
   SidebarSeparator,
 } from "./ui/sidebar";
 import Link from "next/link";
+import Image from "next/image";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -40,7 +41,6 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "./ui/collapsible";
-import { DropdownMenuWrapper } from "./ui/dropdown-menu-wrapper";
 
 const items = [
   {
@@ -78,9 +78,8 @@ const AppSidebar = () => {
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
               <Link href="/">
-                <span className="font-bold tracking-wider">
-                  ADMIN DASHBOARD
-                </span>
+                <Image src="/logo.svg" alt="logo" width={20} height={20} />
+                <span>ADMIN DASHBOARD</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -206,20 +205,16 @@ const AppSidebar = () => {
         <SidebarMenu>
           <SidebarMenuItem>
             <DropdownMenu>
-              <DropdownMenuWrapper
-                trigger={
-                  <SidebarMenuButton>
-                    <User2 /> John Doe <ChevronUp className="ml-auto" />
-                  </SidebarMenuButton>
-                }
-                content={
-                  <DropdownMenuContent align="end">
-                    <DropdownMenuItem>Account</DropdownMenuItem>
-                    <DropdownMenuItem>Setting</DropdownMenuItem>
-                    <DropdownMenuItem>Sign out</DropdownMenuItem>
-                  </DropdownMenuContent>
-                }
-              />
+              <DropdownMenuTrigger asChild>
+                <SidebarMenuButton>
+                  <User2 /> John Doe <ChevronUp className="ml-auto" />
+                </SidebarMenuButton>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem>Account</DropdownMenuItem>
+                <DropdownMenuItem>Setting</DropdownMenuItem>
+                <DropdownMenuItem>Sign out</DropdownMenuItem>
+              </DropdownMenuContent>
             </DropdownMenu>
           </SidebarMenuItem>
         </SidebarMenu>

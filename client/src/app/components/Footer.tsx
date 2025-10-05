@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="flex flex-col items-center gap-4 md:items-start">
         <Logo />
         <p className=" text-sm text-gray-400">
-          &copy; {new Date().getFullYear()} Trendlama.
+          &copy; {new Date().getFullYear()} Trendly.
         </p>
         <p className="text-sm text-gray-400">All rights reserved.</p>
       </div>
